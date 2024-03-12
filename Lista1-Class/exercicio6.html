@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Empresa{
+            nome;
+            receitaAnual;
+            despesasAnuais;
+            constructor(nome, receitaAnual, despesasAnuais){
+                this.nome = nome;
+                this.receitaAnual = receitaAnual;
+                this.despesasAnuais = despesasAnuais;
+            }
+            calculaLucroAnual(){
+                return(this.lucro = this.receitaAnual - this.despesasAnuais).toFixed(2)
+            }
+            exibirRelatorio(){
+                return("O nome da empresa é: " + this.nome + "\nA receita é: " + this.receitaAnual + "\nAs depesas são um total de: " + this.despesasAnuais + "\nE o lucro é: " + this.calculaLucroAnual())
+            }
+        }
+
+        let Empresa1 = new Empresa("Elos", 9000, 7000)
+        let Empresa2 = new Empresa("Batatas", 2033333, 95487)
+        console.log(Empresa1)
+        console.log(`${Empresa1.exibirRelatorio()}`);
+        console.log(Empresa2)
+        console.log(`${Empresa2.exibirRelatorio()}`);
+
+    </script>
+</body>
+</html>
